@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from wiki.models import Page
-from django.views import DetailView, ListView
+from django.views.generic.list import Listview
+from django.views.generic.detail import Detailview
 # Create your views here.
 
 
