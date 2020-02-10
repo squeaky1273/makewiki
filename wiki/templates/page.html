@@ -1,5 +1,24 @@
-<center><h1>{{ article.title }}</h1></center>
+<html>
+<head>
+<style>
+    #myHeader {
+        background-color: rgb(240, 240, 240);
+        color: black;
+        padding: 40px;
+        text-align: center;
+    }
+    .page {
+        background-color: rgb(240, 240, 240);
+        color: black;
+        padding: 10px;
+    }
+</style>
+</head>
+<body>
+<center><h1 id="myHeader">{{ article.title }}</h1></center>
 
-<center><p>Written by {{ article.author }}</p></center>
+<center><p class="page">Written by {{ article.author }}</p></center>
 
-<center><p>{{ article.content }}</p></center>
+<center><p class="page">{{ article.content }}</p></center>
+</body>
+</html>

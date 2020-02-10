@@ -10,9 +10,12 @@ class PageList(ListView):
     CHALLENGES:
       1. On GET, display a homepage that shows all Pages in your wiki.
       2. Replace this CHALLENGE text with a descriptive docstring for PageList.
+      *A page is rendered that shows all of the existng pages in the Django admin database.*
       3. Replace pass below with the code to render a template named `list.html`.
     """
     model = Page
+    page_object_name = "wiki"
+    template_name = "list.html"
 
     def get(self, request):
         """ Returns a list of wiki pages. """
@@ -27,6 +30,7 @@ class PageDetailView(DetailView):
     CHALLENGES:
       1. On GET, render a template named `page.html`.
       2. Replace this docstring with a description of what this accomplishes.
+      *A page is rendered with a specific topic tht was input in the Django admin database.*
 
     STRETCH CHALLENGES:
       1. Import the PageForm class from forms.py.
@@ -40,6 +44,9 @@ class PageDetailView(DetailView):
            - Message Content: REPLACE_WITH_PAGE_TITLE has been successfully updated.
     """
     model = Page
+    page_object_name = "article"
+    template_name = "page.html"
+
 
     def get(self, request, slug):
         """ Returns a specific of wiki page by slug. """
